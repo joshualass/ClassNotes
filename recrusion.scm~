@@ -1,0 +1,12 @@
+; (length L): Returns the number of elemetns in list L.
+
+(define (length L)
+  (display L)
+  (newline)
+  (if (null? L) 0
+  (+ 1 (length (cdr L)))
+  )
+)
+(display "test")
+(newline)
+(display (car (list 1 2 3 4 5)))

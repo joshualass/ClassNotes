@@ -1,0 +1,5 @@
+(display "Hello WOrld\n")
+(display "This is Joshua's first Scheme Program!!\n")
+(display "Enter three integer values\n")
+(display ( / (+ (read) (read) (read)) 3))
+(exit)

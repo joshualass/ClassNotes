@@ -1,0 +1,7 @@
+(define (hurricanetype x)
+  (cond
+   [(and (< x 96) (> x 73) "Minimum")]
+   [(and (< x 111) (> x 95) "Moderate")]
+   [(and (< x 131) (> x 110) "Extensive")]
+   [(and (< x 156) (> x 130) "Extreme")]
+  "Catastrophic")]

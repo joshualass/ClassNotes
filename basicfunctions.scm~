@@ -1,0 +1,8 @@
+
+(define (pythagorean_theorem a b)
+  (sqrt (+ (* a a) (* b b)))
+)
+
+;(define (quadratic a b c))
+
+(display (pythagorean_theorem 5 4))

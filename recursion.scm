@@ -1,0 +1,75 @@
+; (length L): Returns the number of elemetns in list L.
+
+;(define (length L)
+;  (display L)
+;  (newline)
+;  (if (null? L) 0
+;      (+ 1 (length (cdr L)))
+;  )
+;)
+
+;(display  (length '(1 2 3 4 5)))
+
+;fancy append
+(define (append l1 l2)
+  (if (null? l1) l2
+      (cons (car l1) (append (cdr l1) l2))
+  )
+)
+
+;(print (append '(X Y Z) '(A b c)))
+
+(define (sum-list dlist)
+  (if (= (length dlist) 0) 0
+      (if (= (length dlist) 1) (car dlist)
+	  (+ (car dlist) (sum-list (cdr dlist)))
+      )
+   )
+)
+
+; (display (sum-list '(1 3 5 11)))
+
+; find atom in list
+(define (member atm lis)
+  (if (null? lis) #f
+      (if (eq? atm (car lis)) #t
+	  (member atm (cdr lis))
+      )
+  )
+)
+
+;(display (member 2 '(1 3 5 7)))
+
+; (filter pred lst) 
+; mapping example of double
+
+(define (double x) (* x 2))
+
+;mapcar can accept another function
+(define (mapcar func list)
+  (if (null? list) '()
+      (cons (func (car list)) (mapcar func (cdr list)))
+  )
+)
+
+;(display (mapcar double '(1 2 3 4)))
+
+(define (sorted? numList comparator)
+  (cond
+   ((<= (length numList) 1) #t)
+   ((comparator (car numList) (cadr numList)) (sorted? (cdr numList) comparator))
+   (else #f)
+  )
+)
+
+;(display (sorted? '(1 2 2 4 7) <= ))
+
+(define (OILV lis)
+  (cond
+   ((= (length lis) 0) '())
+   ((<= (length lis) 2) (list (car lis)))
+   (else (cons (car lis) (OILV (cddr lis))))
+  )
+)
+
+(display (OILV '(1 2 3 4 5 6 7)))

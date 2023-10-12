@@ -1,0 +1,17 @@
+(define (typeID value)
+  (cond
+   ((boolean? value) "boolean")
+   ((integer? value) "integer")
+   ((real? value) "float")
+   ((string? value) "string")
+   ((char? value) "char")
+   ((symbol? value) "symbol")
+   ((list? value) "list")
+   )
+)
+
+(display (typeID #t))
+(newline)
+(display (typeID 26))
+(newline)
+(display (typeID 26.2))

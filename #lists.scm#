@@ -1,0 +1,15 @@
+ n  (list 2 3 5 7)
+(list 'House 'at 'Pooh 'Corner)
+(list 'buckle 'my 'shoe)
+
+; literal list
+'(1 2 3 4 5)
+
+; ` is used to tell Scheme NOT to eval the first item inside ( )
+; basic operators on scheme list
+; car accesses first item in list
+; cdr access rest of list after current item
+; cons (construct) new list 
+
+;combine cdr and car
+(display (caddr '(1 2 3 4 5))

@@ -1,0 +1,26 @@
+; full header here
+
+(define (helloWorld)
+  (print "Hello World\n")
+)
+
+(define (square n)
+  (* n n)
+)
+
+(define (main)
+  (helloWorld)
+  (display (square 20))
+  (newline)
+)
+
+(main)
+
+(define (has-value? x)
+  (cond
+   ((eq? x "") #f)
+   (else #t)
+   )
+)
+
+;there exist lots of datatype checkers null? is very helpful

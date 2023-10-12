@@ -1,0 +1,4 @@
+
+(define x 6)
+(define y 7)
+(display (+ x y))

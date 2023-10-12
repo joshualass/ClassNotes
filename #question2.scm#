@@ -1,0 +1,2 @@
+
+(cons (* (car lst) 3) (triple-everything (cdr lst)))
